@@ -1,0 +1,32 @@
+Cardiomegaly and Pleural Effusion: Radiographic Reference Notes
+
+Cardiomegaly on a frontal chest radiograph is commonly screened for using
+the cardiothoracic ratio, where a ratio greater than 0.5 (heart width
+divided by widest thoracic diameter) is suggestive of an enlarged cardiac
+silhouette. This finding alone does not identify the underlying cause and
+should always be correlated with clinical history and, where indicated,
+echocardiography.
+
+Suggested next steps when cardiomegaly is flagged:
+- Review prior imaging if available to determine whether the finding is new
+  or chronic and stable.
+- Correlate with signs and symptoms of heart failure: dyspnea, orthopnea,
+  peripheral edema, and elevated jugular venous pressure.
+- Order or review a BNP or NT-proBNP level and an ECG.
+- Recommend echocardiography to assess chamber size, ejection fraction, and
+  valvular function.
+
+Pleural effusion appears as blunting of the costophrenic angle on an upright
+film, and larger effusions produce a meniscus sign. Bilateral effusions in
+the presence of cardiomegaly are frequently transudative and related to
+heart failure, while unilateral or exudative-appearing effusions warrant
+broader workup.
+
+Suggested next steps when effusion is flagged:
+- Assess for associated cardiomegaly, which raises suspicion for a
+  cardiogenic transudative effusion.
+- Consider diagnostic thoracentesis when the effusion is new, large, or the
+  etiology is unclear, sending fluid for Light's criteria to distinguish
+  transudate from exudate.
+- In the absence of cardiac findings, consider infectious, malignant, or
+  inflammatory causes and correlate with clinical presentation.

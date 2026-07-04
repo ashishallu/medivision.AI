@@ -1,0 +1,31 @@
+Pneumonia and Consolidation: Radiographic Reference Notes
+
+Consolidation on a chest radiograph typically appears as a region of increased
+opacity where air in the alveoli has been replaced by fluid, pus, blood, or
+cells. When consolidation is accompanied by air bronchograms, infectious
+pneumonia should be high on the differential. Lobar pneumonia classically
+presents as a well-defined opacity confined to one lobe, while
+bronchopneumonia tends to appear as patchy, multifocal opacities.
+
+Suggested next steps when pneumonia is suspected from imaging alone:
+- Correlate with clinical symptoms: fever, productive cough, pleuritic chest
+  pain, and hypoxia.
+- Obtain a complete blood count and inflammatory markers (CRP, procalcitonin)
+  to support or rule out an infectious process.
+- Consider sputum culture or blood cultures in moderate-to-severe cases
+  before starting empiric antibiotics.
+- Reassess with a follow-up radiograph in four to six weeks after treatment
+  to confirm resolution, particularly in patients over 50 or with risk
+  factors for underlying malignancy.
+- In immunocompromised patients, consider a broader differential including
+  atypical organisms and fungal infection, and have a lower threshold for CT
+  imaging.
+
+Differentiating pneumonia from other causes of opacity:
+- Pulmonary edema tends to be bilateral, gravity-dependent, and associated
+  with cardiomegaly and vascular redistribution, whereas infectious
+  consolidation is often more focal.
+- Atelectasis can mimic consolidation but usually shows volume loss (shifted
+  fissures, elevated hemidiaphragm) rather than air bronchograms.
+- Malignancy should be considered when consolidation fails to resolve after
+  an appropriate course of antibiotics.

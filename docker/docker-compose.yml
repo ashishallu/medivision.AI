@@ -1,0 +1,42 @@
+# docker-compose.yml
+# Runs the MediVision AI Streamlit app alongside a local Ollama service.
+# Both are free/local -- no external API keys or paid services required.
+
+version: "3.9"
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: medivision-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: medivision-app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ../data:/app/data
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    depends_on:
+      - ollama
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 3
+
+volumes:
+  ollama_data:

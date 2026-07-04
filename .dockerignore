@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+data/chestxray14/
+data/chroma_db/
+data/gradcam_outputs/
+.git/
+.gitignore
+README.md

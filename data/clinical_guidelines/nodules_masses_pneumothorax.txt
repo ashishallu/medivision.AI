@@ -1,0 +1,33 @@
+Pulmonary Nodules, Masses, and Pneumothorax: Radiographic Reference Notes
+
+A pulmonary nodule is generally defined as a rounded opacity up to 3
+centimeters in diameter, while lesions larger than 3 centimeters are termed
+masses and carry a substantially higher likelihood of malignancy. Key
+features to describe include size, border characteristics (smooth,
+lobulated, or spiculated), presence of calcification, and growth on serial
+imaging.
+
+Suggested next steps when a nodule or mass is flagged:
+- Compare against prior imaging whenever available; stability over two or
+  more years is reassuring for benignity.
+- For indeterminate nodules, follow established size-based follow-up
+  protocols (such as Fleischner Society guidelines) to determine the
+  interval for repeat CT imaging.
+- Spiculated margins, irregular borders, or associated lymphadenopathy
+  should prompt referral for CT chest and consideration of biopsy.
+- Review smoking history and other risk factors to help stratify
+  malignancy risk.
+
+Pneumothorax appears as a visceral pleural line with absent lung markings
+peripheral to that line. It should be assessed for size and for tension
+physiology (mediastinal shift, flattened diaphragm), which is a medical
+emergency requiring immediate decompression.
+
+Suggested next steps when pneumothorax is flagged:
+- Assess clinical stability immediately; any signs of tension pneumothorax
+  require urgent needle decompression or chest tube placement.
+- Estimate the size of the pneumothorax to guide management between
+  observation, needle aspiration, or chest tube insertion.
+- Identify and treat any underlying cause, such as recent trauma, chest
+  procedure, or underlying bullous lung disease.
+- Obtain a follow-up film after intervention to confirm lung re-expansion.
