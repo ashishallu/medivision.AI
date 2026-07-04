@@ -70,15 +70,28 @@ class ChestXray14Dataset(Dataset):
 def build_dataloaders():
     class_names = _cfg["model"]["class_names"]
     data_dir = resolve_path("data/chestxray14")
-    csv_path = os.path.join(data_dir, "Data_Entry_2017.csv")
     image_dir = os.path.join(data_dir, "images")
 
-    if not os.path.exists(csv_path):
+    # Accept either the full NIH release filename or the Kaggle 5%
+    # sample's filename, so this works with either download without
+    # requiring the user to rename anything.
+    candidate_csv_names = ["Data_Entry_2017.csv", "sample_labels.csv"]
+    csv_path = None
+    for name in candidate_csv_names:
+        candidate = os.path.join(data_dir, name)
+        if os.path.exists(candidate):
+            csv_path = candidate
+            break
+
+    if csv_path is None:
         raise FileNotFoundError(
-            f"Dataset CSV not found at {csv_path}.\n"
-            "Download the NIH ChestX-ray14 dataset (free, public) and place "
-            "it at data/chestxray14/ before training. See README.md for the link."
+            f"No dataset label CSV found in {data_dir}.\n"
+            f"Expected one of: {candidate_csv_names}.\n"
+            "Download the NIH ChestX-ray14 dataset (or the Kaggle 5% sample) "
+            "and place it at data/chestxray14/ before training. See README.md."
         )
+
+    print(f"[train] Using label file: {csv_path}")
 
     df = pd.read_csv(csv_path)
     train_df, temp_df = train_test_split(
@@ -97,9 +110,9 @@ def build_dataloaders():
     test_ds = ChestXray14Dataset(test_df, image_dir, class_names, get_inference_transform())
 
     batch_size = _cfg["training"]["batch_size"]
-    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True, num_workers=2)
-    val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False, num_workers=2)
-    test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False, num_workers=2)
+    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True, num_workers=0)
+    val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False, num_workers=0)
+    test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False, num_workers=0)
 
     return train_loader, val_loader, test_loader
 
