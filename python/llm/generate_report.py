@@ -74,7 +74,7 @@ def generate_report(findings: dict, guidance: dict) -> str:
     }
 
     try:
-        response = requests.post(url, json=payload, timeout=120)
+        response = requests.post(url, json=payload, timeout=600)
         response.raise_for_status()
     except requests.exceptions.ConnectionError as exc:
         raise RuntimeError(

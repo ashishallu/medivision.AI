@@ -5,7 +5,6 @@ data/chestxray14/
 data/chroma_db/
 data/gradcam_outputs/
 python/model/weights/*.pth
-!python/model/weights/resnet50_chestxray.pth
 .streamlit/
 .env
 *.log

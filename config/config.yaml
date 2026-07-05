@@ -48,12 +48,15 @@ llm:
   max_tokens: 600
 
 training:
-  batch_size: 32
+  batch_size: 16
   learning_rate: 0.0001
-  num_epochs: 10
+  num_epochs: 5
   val_split: 0.15
   test_split: 0.15
   seed: 42
+  # NOTE: tuned for a CPU-only laptop run on the ~5,606-image NIH sample
+  # dataset. If you later train on the full 112,120-image dataset with a
+  # GPU, bump num_epochs to 10-20 and batch_size to 32-64.
 
 streamlit:
   page_title: "MediVision AI - Chest X-Ray Diagnostic Assistant"
