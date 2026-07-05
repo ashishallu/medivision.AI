@@ -31,11 +31,15 @@ def _get_collection():
         collection_name = _cfg["rag"]["chroma_collection_name"]
         try:
             _collection = client.get_collection(collection_name)
-        except Exception as exc:
-            raise RuntimeError(
-                f"ChromaDB collection '{collection_name}' not found at {persist_dir}. "
-                "Run `python -m python.rag.build_index` first."
-            ) from exc
+        except Exception:
+            # Collection doesn't exist yet -- most likely a fresh clone or
+            # a fresh deployment (e.g. Streamlit Community Cloud) where
+            # data/chroma_db/ is gitignored and was never built. Build it
+            # automatically instead of requiring a manual CLI step that
+            # isn't possible on most hosted deployments.
+            from python.rag.build_index import build_index
+            build_index()
+            _collection = client.get_collection(collection_name)
     return _collection
 
 
