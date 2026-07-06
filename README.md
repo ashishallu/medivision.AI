@@ -146,33 +146,3 @@ docker exec -it medivision-ollama ollama pull mistral:7b
 
 Then open http://localhost:8501.
 
-## Why this project structure
-
-- **Language separation**: `python/`, `shell/`, `docker/`, and `config/`
-  (YAML) are kept in distinct top-level folders rather than dropping shell
-  scripts or Dockerfiles inside the Python tree, matching the same
-  separation-of-concerns pattern used across this portfolio's other
-  projects.
-- **Single source of config**: every path, model name, and hyperparameter
-  lives in `config/config.yaml`, loaded once via `python/utils/config_loader.py`.
-  Nothing is hardcoded in application code.
-- **Explainability is first-class**: Grad-CAM isn't bolted on — it's a
-  dedicated module (`python/model/gradcam.py`) so the "why" behind a
-  prediction is always inspectable, which matters for responsible AI in
-  healthcare contexts.
-- **Everything free/local**: RAG uses ChromaDB + sentence-transformers
-  instead of a paid vector DB or embedding API, and report generation uses
-  a locally-run Ollama model instead of a paid LLM API — the whole pipeline
-  runs with zero recurring cost and no API keys.
-
-## Interview talking points
-
-- CNN + NLP + RAG fused into a single coherent product (CV meets NLP).
-- Multi-label classification (sigmoid, not softmax) — correctly modeling
-  that chest X-rays can show multiple co-occurring findings.
-- Explainability built in via Grad-CAM, directly addressing the "black box"
-  criticism of medical AI.
-- Responsible AI framing: confidence thresholds, explicit "requires
-  physician review" disclaimers baked into both the UI and the LLM prompt,
-  and a RAG layer that grounds the LLM in retrieved reference text rather
-  than letting it hallucinate clinical recommendations.
